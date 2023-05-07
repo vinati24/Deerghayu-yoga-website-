@@ -1,0 +1,133 @@
+.login-form{
+    position: absolute;
+    top:120%; left:50%;
+    transform: translateX(-50%);
+    width: 40rem;
+    background: var(--white);
+    box-shadow: var(--box-shadow);
+    padding:2rem;
+    text-align: center;
+    animation: fadeIn .2s linear;
+    display: none;
+
+    &.active{
+       display: block;
+    }
+
+    h3{
+       @include titleText(2.5rem);
+       padding-bottom: 1rem;
+       text-transform: uppercase;
+    }
+
+    .box{
+       width: 100%;
+       padding:1.2rem 1.4rem;
+       background: var(--light-bg);
+       font-size: 1.6rem;
+       color:var(--light-color);
+       margin:.7rem 0;
+    }
+
+    .flex{
+       display: flex;
+       align-items: center;
+       gap:.5rem;
+       padding-top: 1.5rem;
+       padding-bottom: 1rem;
+
+       label{
+          font-size:1.5rem;
+          color:var(--light-color);
+          cursor: pointer;
+       }
+
+       a{
+          font-size:1.5rem;
+          color:var(--light-color);
+          margin-left: auto;
+
+          &:hover{
+             color:var(--yellow);
+             text-decoration: underline;
+          }
+       }
+    }
+
+    .btn{
+       width: 100%;
+    }
+
+    p{
+       @include graphText(1.5rem);
+       padding-top: 1.5rem;
+
+       a{
+          color:var(--yellow);
+
+          &:hover{
+             text-decoration: underline;
+          }
+       }
+    }
+ }
+
+
+.contact-info{
+ position: fixed;
+ top:0; right:0;
+ width: 35rem;
+ background: var(--white);
+ height: 100%;
+ text-align: center;
+ z-index: 1100;
+ padding:0 2rem;
+ padding-top: 5rem;
+ display: none;
+
+ &.active{
+    box-shadow: 0 0 0 100vw rgba(0,0,0,.7);
+    display: block;
+ }
+
+ #close-contact-info{
+    position: absolute;
+    top:1rem; right: 1.5rem;
+    cursor: pointer;
+    font-size: 4rem;
+    color:var(--black);
+
+    &:hover{
+       transform: rotate(90deg);
+    }
+ }
+
+ .info{
+    padding:2rem 0;
+
+    i{
+       @include iconsBox();
+       margin-bottom: .5rem;
+    }
+
+    h3{
+       @include titleText(2rem);
+       padding:1rem 0;
+    }
+
+    p{
+       @include graphText(1.5rem);
+    }
+ }
+
+ .share{
+    padding-top: 2rem;
+    border-top: var(--border);
+    margin-top: 1rem;
+
+    a{
+       @include iconsBox();
+       margin:0 .3rem;
+    }
+ }
+}

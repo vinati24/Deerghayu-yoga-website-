@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deerghayu - Heal through yoga</title>
+
+    <!-- font awesome cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="style.scss">
+  </head>
+  <body>
+    <!-- header section starts  -->
+
+    <header class="header">
+      <a href="#" class="logo"> Deergh<span>ayu</span> </a>
+
+      <nav class="navbar">
+        <div id="nav-close" class="fas fa-times"></div>
+        <a href="#home">home</a>
+        <a href="#Register">Register now</a>
+        <a href="#about">About</a>
+        <a href="#types">Disorders</a>
+        <a href="#yoga">yoga</a>
+        <a href="#trendingdieases">common Diseases</a>
+      </nav>
+
+      <div class="icons">
+        <div id="menu-btn" class="fas fa-bars"></div>
+        <div id="search-btn" class="fas fa-search"></div>
+        <div id="info-btn" class="fas fa-info-circle"></div>
+        <div id="login-btn" class="fas fa-user"></div>
+      </div>
+
+      <form action="" class="login-form">
+        <h3>login form</h3>
+        <input type="email" placeholder="enter your email" class="box" />
+        <input type="password" placeholder="enter your password" class="box" />
+        <div class="flex">
+          <input type="checkbox" name="" id="remember-me" />
+          <label for="remember-me">remember me</label>
+          <a href="#">forgot password?</a>
+        </div>
+        <input type="submit" value="login now" class="btn" />
+        <p>don't have an account <a href="#">create one!</a></p>
+      </form>
+      <div class="contact-info">
+        <div id="close-contact-info" class="fas fa-times"></div>
+  
+        <div class="info">
+          <i class="fas fa-phone"></i>
+          <h3>phone number</h3>
+          <p>+123-456-7890</p>
+          <p>+111-222-3333</p>
+        </div>
+  
+        <div class="info">
+          <i class="fas fa-envelope"></i> 
+          <h3>email address</h3>
+          <p>Deerghayu2407@gmail.com</p>
+          <p>deerghayu20@gmail.com</p>
+        </div>
+  
+        <div class="info">
+          <i class="fas fa-map-marker-alt"></i>
+          <h3>office address</h3>
+          <p>Yavatamal, india - 445002</p>
+        </div>
+  
+        <div class="share">
+          <a href="#" class="fab fa-facebook-f"></a>
+          <a href="#" class="fab fa-twitter"></a>
+          <a href="#" class="fab fa-instagram"></a>
+          <a href="#" class="fab fa-linkedin"></a>
+        </div>
+      </div>
+      <!-- header section ends -->
+      
+      <!-- search form  -->
+  
+      <div class="search-form">
+        <div id="close-search" class="fas fa-times"></div>
+  
+        <form action="">
+          <input
+            type="text"
+            name=""
+            placeholder="Disease name..... "
+            id="search-box"
+            onkeyup="yoga()">
+          <!-- <label for="search-box" class="fas fa-search"></label>  -->
+          <ul id="myUL">
+      <li><a href="indexDIabities.html" target="_blank"> diabetes</a></li>
+      <li><a href="indexThyroid.html" target="_blank">Thyroid</a></li>
+      <li><a href="indexPCOS.html" target="_blank">PCOS</a></li>
+    </ul>
+        </form>
+        
+      </div>
+    </header>
+    <script>
+      function yoga() {
+  // Declare variables
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById('search-box');
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myUL");
+  li = ul.getElementsByTagName('li');
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+    </script>
+    <!-- home section starts  -->
+
+    <section class="home" id="home">
+      <div class="swiper home-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div
+              class="box"
+              style="background: url(images/home-bg-2.jpg) no-repeat"
+
+            >
+              <div class="content">
+                <span>yoga </span>
+                <h3>Deerghayu</h3>
+                <p>
+                  "It's not about being good at something. It's about being good to yourself."<br>
+                  "Inhale the future, exhale the past."
+                </p>
+                <a href="#Register" class="btn">get started</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div
+              class="box second"
+              style="background: url(images/home-bg-1.jpg) no-repeat">
+              <div class="content">
+                <span>yoga </span>
+                <h3>Deerghayu</h3>
+                <p>
+                  "A flower does not think of competing to the flower next to it. It just blooms."<br>
+                  "Letting go is the hardest asana."
+                </p>
+                <a href="#Register" class="btn">get started</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div
+              class="box"
+              style="background: url(images/home-bg-3.jpg) no-repeat"
+            >
+              <div class="content">
+                <span>yoga </span>
+                <h3>Deerghayu</h3>
+                <p>
+                  "The pose begins when you want to leave it."<br>
+                  "Yoga is the journey of the self, through the self, to the self." -- The Bhagavad Gita
+                </p>
+                <a href="#Register" class="btn">get started</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </section>
+
+    <!-- home section ends -->
+
+    <!-- about section starts  -->
+
+    <section class="about" id="about">
+      <div class="image">
+        <img src="images/about-img (2).jpg" alt="" />
+      </div>
+
+      <div class="content">
+        <h2>Facts Related Deerghayu </h2>
+        <p>
+          <h3>Deergahyu mean -</h3>
+          <p>The term "DEERGHAAYU" denotes" LONGEVITY". The The bifurcation of Deerghaayu goes as "DEERGH" meaning "LONG" and AAYU meaning" LIFE"</p>
+          <h3>Why Deergahyu - </h3>
+          <p>The idea behind choosing this name for our website was to give our users a peek or an idea about our website before even entering the main frame.</p>
+          <h3>Purpose - </h3>
+          <p>The purpose of us designing this website was to provide our user a platform to navigate through their problems with a single click</p>
+        </p>
+        <a href="https://www.worldwidejournals.com/international-journal-of-scientific-research-(IJSR)/recent_issues_pdf/2016/February/February_2016_1455963883__124.pdf" target="_blank" class="btn">read more</a>
+      </div>
+    </section>
+
+    <!-- about section ends -->
+
+    <!--disorders section starts  -->
+
+    <section class="types" id="types">
+      <h1 class="heading"><span> Types Of Disorders </span></h1>
+
+      <div class="box-container">
+        <div class="box">
+          <img src="images/lifestyledisorders.jpg" alt="image is here" />
+          <h2>Lifestyle Disorders</h2>
+          <p>
+            Lifestyle diseases can be defined as diseases linked with one's lifestyle. These diseases are non-communicable diseases. 
+            <p>They are caused by lack of physical activity, unhealthy eating, alcohol, substance use disorders and smoking tobacco,etc.</p>
+            <h3>Examples -</h3>
+            <p>Hypertension , Diabities , obesity etc. </p>
+          <a href="https://www.sunshinehospitals.com/what-are-lifestyle-disorders/" target="_blank" class="btn">read more</a>
+        </div>
+
+        <div class="box">
+          <img src="images/hormonal.jpg" alt="image is here" />
+          <h2>Hormonal/Endocrine Disorders</h2>
+          <p>
+           The diseases which are caused due to hormonal imbalanace in the body , they can be broadly categorised as endocrine diseases
+           <h3>Examples are </h3>
+           <p>PCOS (Polycystic ovary syndrome)</p>
+           <P>Hypothyroidism etc.</P>
+          </p>
+          <a href="https://www.webmd.com/diabetes/endocrine-system-disorders" target="_blank" class="btn">read more</a>
+        </div>
+
+        <div class="box">
+          <img src="images/mentalhealth.jpg" alt="" />
+          <h2>Mental Health Disorders</h2>
+          <p>
+            A wide range of conditions that affect mood, thinking and behaviour.
+            <h3>Examples - </h3>
+            <p>Anxiety , Bipolar , Clinical Depression etc </p>
+          </p>
+          <a href="https://www.who.int/news-room/fact-sheets/detail/mental-disorders" target="_blank" class="btn">read more</a>
+        </div>
+
+        <div class="box">
+          <img src="images/muscular.jpg" alt="" />
+          <h2>Muscular Disorders</h2>
+          <p>
+            A muscle disorder includes patterns of weakness, loss of muscle tissue, electromyogram (EMG) findings, or biopsy results that suggest a muscle problem. The muscle disorder can be inherited, such as muscular dystrophy, or acquired, such as alcoholic or steroid myopathy.
+            <h3>Examples - </h3>
+            <p>Muscle strain , Muscular dystrophy , parkinson's disease</p>
+          </p>
+          <a href="https://medlineplus.gov/muscledisorders.html" target="_blank" class="btn">read more</a>
+        </div>
+      </div>
+    </section>
+    <!--types section ends  -->
+
+
+    <!-- yoga section starts  -->
+
+    <section class="yoga" id="yoga">
+      <h1 class="heading"> Daily yoga Aasans</h1>
+
+      <div class="box-container">
+        <div class="box">
+          <div class="image">
+            <img src="images/asan1" alt="img of assan 1" />
+          </div>
+          <div class="content">
+            <h3>Standing Forward Fold or Uttanasana   </h3>
+            <p>
+              opens the back of the legs, the hips and the back. Making this pose even more appealing for non-bendy men is that it's easily modified.
+            
+            </p>
+            <div class="time"></div>
+            <a href="https://www.youtube.com/watch?v=0kOOvLPN23Q" target="_blank" class="btn">See video</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img src="images/asan2.jpg" alt="img of aasan 2" />
+          </div>
+          <div class="content">
+            <h3>Warrior One or Virabhadrasana </h3>
+            <p>
+              the hips and shoulders. On top of opening these tight areas, Virabhadrasana is a strengthening posture.
+            </p>
+            <div class="time"></div>
+            <a href="https://www.youtube.com/watch?v=kkGY3xBnaGc" target="_blank" class="btn">see video</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img src="images/asan3.jpg" alt="img of aasan 3" />
+          </div>
+          <div class="content">
+            <h3>Upward Facing Dog or Urdhvadandasana </h3>
+            <p>
+              This posture will help anyone who sits behind a desk or a wheel for far too many hours each day by opening the abdomen and hip flexors.
+            </p>
+            <div class="time"></div>
+            <a href="https://www.youtube.com/watch?v=4SN1nhO9V8M" target="_blank" class="btn">see video</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img src="images/asan4.jpg" alt="img of Asan 4" />
+          </div>
+          <div class="content">
+            <h3>Boat Pose or Navasana </h3>
+            <p>
+              This posture is particularly beneficial to men for what it does to stimulate the prostate gland and even just raise awareness and reduce tension in the pelvic region.
+            </p>
+            <div class="time"></div>
+            <a href="https://www.youtube.com/watch?v=QVEINjrYUPU" target="_blank" class="btn">see video</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img src="images/asan5.jpg" alt="img of asan 5" />
+          </div>
+          <div class="content">
+            <h3>Butterfly Pose or Baddha Konasana</h3>
+            <p>
+              This pose is also a good way to draw attention to mula bandha, the root lock, which also brings awareness and more energy to the area around the hips. (wink, wink)
+            </p>
+            <div class="time"></div>
+            <a href="https://www.youtube.com/watch?v=hRcvSEtoecg" target="_blank" class="btn">see video</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img src="images/asan6.jpg" alt="" />
+          </div>
+          <div class="content">
+            <h3>Chair Pose or Utkatasana</h3>
+            <p>
+              Chair pose works the quads, ankles, butt and shoulders, while also opening the chest—helping you develop greater stability
+            </p>
+            <div class="time"></div>
+            <a href="https://www.youtube.com/watch?v=4xyTmX_OMiM" target="_blank" class="btn">see video</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--yoga section ends -->
+
+    <!--  section starts  -->
+
+    <section class="trendingdieases" id="trendingdieases">
+      <h1 class="heading">yoga resolve Diseases</h1>
+
+      <div class="box-container">
+        <div class="box">
+
+          <h3>Thyroid</h3>
+          <p>
+            Also known as Adams apple regulates metabolic activities of the human body and a disorder in the discharge of hormones can cause grave problems to the body.
+          </p>
+          <a href="/indexThyroid.html" target="_blank" class="btn">read more</a>
+        </div>
+
+        <div class="box">
+          <h3>PCOS</h3>
+          <p>
+            PCOS is a common occurrence in women at reproductive age. Women suffering from obesity are more prone to PCOS.
+          </p>
+          <a href="/indexPCOS.html" target="_blank" class="btn">read more</a>
+        </div>
+
+        <div class="box">
+          <h3>Arthritis</h3>
+          <p>
+            Arthritis is a common rheumatic condition among adults aged 65 or more. These days' people of all age groups can be affected by arthritis which includes pain.
+          </p>
+          <a href="https://www.hopkinsarthritis.org/patient-corner/disease-management/yoga-for-arthritis/" target="_blank" class="btn">read more</a>
+        </div>
+
+        <div class="box">
+          
+          <h3>Lower back pain</h3>
+          <p>
+            The most intricate part of the human body is the lower back. Long hours of desk work can cause severe problems.
+          </p>
+          <a href="https://www.everydayhealth.com/back-pain-pictures/best-yoga-poses-to-soothe-back-pain.aspx" target="_blank" class="btn">read more</a>
+        </div>
+
+        <div class="box">
+          
+          <h3>Diabetes</h3>
+          <p>
+            It is a condition which affects a person's metabolic system as the glucose level rises because of inadequate insulin production
+          </p>
+          <a href="/indexDIabities.html" target="_blank" class="btn">read more</a>
+        </div>
+
+        <div class="box">
+          <h3>Indigestion/ Stomach Disorder</h3>
+          <p>
+            Stomach disorder and indigestion can lead to a number of health issues such as Gastritis, Diarrhoea, heartburn etc
+          </p>
+          <a href="https://www.india.com/lifestyle/yoga-asanas-to-improve-digestion-5-yoga-poses-for-a-strong-digestive-system-2400692/"  target="_blank" class="btn">read more</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- services section ends -->
+
+    <!-- registration section  -->
+
+<section class="Register
+" id="Register">
+
+  <h1 class="heading"> Register Now  </h1>
+  
+  <div class="row">
+  
+      <form action="" data-aos="fade-right">
+          <input type="text" placeholder="Enter  name" class="box">
+          <input type="email" placeholder="Enter  email" class="box">
+          <input type="password" placeholder="Enter password" class="box">
+          <input type="number" placeholder="Enter Mobile number" class="box">
+          <textarea name="" id="" cols="30" rows="10" class="box address" placeholder="Leave a comment"></textarea>
+          <input type="submit" value="Register  now" class="btn">
+      </form>
+  
+      <div class="image" data-aos="fade-left">
+          <img src="images/reg.jpg" alt="">
+      </div>
+  
+  </div>
+  
+</section>
+
+    <!-- footer section starts  -->
+
+    <section class="footer">
+      <div class="box-container">
+        <div class="box">
+          <h3>quick links</h3>
+          <a href="#home">home</a>
+          <a href="#about">about</a>
+          <a href="#trendingdieases">common Diseases</a>
+          <a href="#yoga">yoga</a>
+          <a href="#Register">Register now</a>
+          <a href="#types">Disorder</a>
+        </div>
+
+        <div class="box">
+          <h3>extra links</h3>
+          <a href="#">my search</a>
+          <a href="#">my Diseases</a>
+          <a href="#">ask questions</a>
+          <a href="#">terms of use</a>
+          <a href="#">privacy policy</a>
+        </div>
+
+        <div class="box">
+          <h3>contact info</h3>
+          <a href="#"> <i class="fas fa-phone"></i> +123-456-7890 </a>
+          <a href="#"> <i class="fas fa-phone"></i> +111-222-3333 </a>
+          <a href="#"> <i class="fas fa-envelope"></i> Deergahyu2407@gmail.com</a>
+          <a href="#">
+            <i class="fas fa-map"></i> Yavatamal , Maharastra INDIA
+          </a>
+        </div>
+
+        <div class="box">
+          <h3>follow us</h3>
+          <a href="https://www.facebook.com" target="_blank"> <i class="fab fa-facebook-f"></i> facebook </a>
+
+          <a href="https://www.twitter.com" target="_blank"> <i class="fab fa-twitter"></i> twitter </a>
+          <a href="https://www.instagram.com" target="_blank"> <i class="fab fa-instagram"></i> instagram </a>
+          <a href="https://www.linkedin.com" target="_blank"> <i class="fab fa-linkedin"></i> linkedin </a>
+          <a href="https://www.github.com" target="_blank"> <i class="fab fa-github"></i> github </a>
+        </div>
+      </div>
+
+      <div class="credit">
+        created by <span>Team Deerghayu</span> | all rights reserved!
+      </div>
+    </section>
+
+    <!-- footer section ends -->
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+    <!-- custom js file link  -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
